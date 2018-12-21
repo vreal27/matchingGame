@@ -3,38 +3,49 @@ html {box-sizing: border-box;}
 
 body {
 	margin: 0;
-	display: flex;
-	justify-content: center;
+	
 }
 
 #pics {
-	height: 1400px;
-	width: 900px;
+	width: 1000px;
 	border: solid 1px black;
 	display: flex;
 	flex-wrap: wrap;
-	justify-content: center;
+	justify-content: space-between;
 
 }
 
+.card {
+	height: 150px;
+	width: 150px;
+	position: relative;
+	
+}
 
-.randomPic{
+.card .randomPic  {
+	position: absolute;
 	height: 150px;
 	width: 150px;
 	border: solid 1px black;
-	margin: 20px;
-	padding: 20px;
-	display: flex;
-	justify-content: center;
+	background-color: white;
+	
+}
+.card .frontcolor{
+	position: absolute;
+	height: 150px;
+	width: 150px;
+	border: solid 1px black;
+	background-color: blue;
 }
 
-p {
-	margin-top: 45px;
-	height: 50px;
-	width: 50px;
-}
+
+
 
 img {
-	height: 100%;
-	width: 100%;
+	height: 100px;
+	width: 100px;
+	position: relative;
+    top: 24px;
+    right: -18px;
 }
+
