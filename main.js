@@ -25,9 +25,42 @@ container.innerHTML = cardTemplate
 $(".card").flip({
 		
 		trigger:'click'
+
 	});
 
+var newArray = []
+
+var compareArray = []
+
+
+var counter = 0
+
+
+$(".card").on('click', function(){
+	compareArray.push($(this).html())
+
+	console.log(compareArray)
+	if(compareArray[0] ===  compareArray[1]){
+
+		console.log('match')
+	} else {
+		console.log('not a match')
+	}
+
 })
+
+
+
+
+
+
+	
+
+
+
+})
+
+
 
 
 
