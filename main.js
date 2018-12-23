@@ -21,43 +21,59 @@ $(document).ready(function(){
 		`	
 	})
 
-container.innerHTML = cardTemplate
-$(".card").flip({
+	container.innerHTML = cardTemplate
+
+	$(".card").flip({
+			
+			trigger:'manual'
+
+		});
+
+
+	var compareArray = []
+
+	if(!$(".card").hasClass('flipped') && !$(".card").hasClass('match')){
 		
-		trigger:'click'
+		$(".card").on('click', function(e){
+		
+			$(this).flip(true)
+			
+			compareArray.push($(this).html())
 
-	});
+			$(this).addClass('flipped')
 
-var newArray = []
+			var counter = compareArray.length
 
-var compareArray = []
+			if(counter === 2){
 
+				if(compareArray[0] ===  compareArray[1]){
 
-var counter = 0
+				console.log('match')
 
+				$(".flipped").addClass('match')
+				$(".match").removeClass('flipped')
+				$(".match").off('.flip')
+				console.log(compareArray)
+				compareArray = []
+				console.log(compareArray)
+				} else {
 
-$(".card").on('click', function(){
-	compareArray.push($(this).html())
+					setTimeout(function(){
+						console.log('no match')
 
-	console.log(compareArray)
-	if(compareArray[0] ===  compareArray[1]){
+					$(".flipped").flip(false)
 
-		console.log('match')
-	} else {
-		console.log('not a match')
+					$('.flipped').removeClass("flipped")
+
+				}, 1000)
+
+				compareArray = []
+					
+
+				}
+			}
+		})
 	}
-
-})
-
-
-
-
-
-
-	
-
-
-
 })
 
 
