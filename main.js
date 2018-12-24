@@ -12,7 +12,6 @@ $(document).ready(function(){
 		cardTemplate += `
 		<div class='card'>
 			<div class="frontcolor front">
-				Front content
 			</div>
 			<div class="randomPic back">
 				<img src="${card.pic}"/>
@@ -22,6 +21,12 @@ $(document).ready(function(){
 	})
 
 	container.innerHTML = cardTemplate
+
+
+	$("#startButton").on('click', function(){
+		$('#startScreen').hide();
+		$('.card').show();
+	})
 
 	$(".card").flip({
 			
