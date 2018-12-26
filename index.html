@@ -7,22 +7,38 @@
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
 </head>
 	<body>
+	<div id=container>
 		<div id="startScreen">
 			<h1>Animal Matching Game!</h1>
-			<input id="startButton" type="button" value="Roar!"/>
+			<h2>click below to play!</h2>
+			<input id="startButton" type="button" value="New Game"/>
+		</div>
+		<div id=attempts>
+			<p>Healthbar<span id="lifecounter"></span></p>
+			<ul id="lifebar">
+					<li><i class="fab fa-grunt"></i></li>
+					<li><i class="fab fa-grunt"></i></li>
+					<li><i class="fab fa-grunt"></i></li>
+					<li><i class="fab fa-grunt"></i></li>
+					<li><i class="fab fa-grunt"></i></li>
+					<li><i class="fab fa-grunt"></i></li>
+					<li><i class="fab fa-grunt"></i></li>
+					<li><i class="fab fa-grunt"></i></li>
+					<li><i class="fab fa-grunt"></i></li>	
+			</ul>
 		</div>
 		<div id=pics>
 		</div>
-
-
-
-
-
-
-
-
-
-
+		<div id="timer"></div>
+		<div id="loseScreen">
+			<h2>You LOSE!</h2>
+			<input class="refresh" type="button" value="Play Again?">
+		</div>
+		<div id="winScreen">
+			<h2>You WIN!</h2>
+			<input class="refresh" type="button" value="Play Again?">
+		</div>
+	</div>
 	<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
 	<script src="https://cdn.rawgit.com/nnattawat/flip/master/dist/jquery.flip.min.js"></script>								
 	<script src="main.js"></script>
